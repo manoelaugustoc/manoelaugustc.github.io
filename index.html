@@ -7,6 +7,7 @@
   <meta name="description" content="Manoel Augusto de Carvalho - Gerente de Projetos com 16 anos de experiência em TI, especializado em metodologias ágeis e PMI">
   <meta name="keywords" content="gerente de projetos, TI, Scrum, Kanban, PMI, Recife, desenvolvimento de software">
   <title>Manoel Augusto de Carvalho - Gerente de Projetos</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --primary-color: #2c3e50;
@@ -21,7 +22,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
     }
 
     body {
@@ -51,11 +51,47 @@
       margin-bottom: 0.5rem;
     }
 
-    h2 {
+    .section-header {
       color: var(--accent-color);
-      margin: 2rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--accent-color);
+      margin: 1rem 0;
+      padding: 1rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--light-bg);
+      border-radius: 5px;
+      transition: all 0.3s ease;
+    }
+
+    .section-header:hover {
+      background-color: #dde4e6;
+    }
+
+    .section-header i {
+      transition: transform 0.3s ease;
+    }
+
+    .section-header.active i {
+      transform: rotate(180deg);
+    }
+
+    .section-content {
+      display: none;
+      padding: 1rem;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .contact-info {
@@ -77,7 +113,9 @@
     }
 
     .section {
-      margin: 2rem 0;
+      margin: 1rem 0;
+      border: 1px solid #eee;
+      border-radius: 5px;
     }
 
     .experience-item {
@@ -141,218 +179,272 @@
 
   <main class="container">
     <section class="section">
-      <h2>Objetivo</h2>
-      <p>Gerente de Projetos</p>
-    </section>
-
-    <section class="section">
-      <h2>Resumo Profissional</h2>
-      <br>
-
-      <p>Profissional de TI com mais 20 anos de experiência em tecnologia, possuo um sólido background em gestão de projetos, liderança de equipes multidisciplinares e implementação de metodologias ágeis.Ao longo de minha trajetória profissional, atuei em diversos setores, incluindo logística, indústria alimentícia, eletrônicos, transportadoras e serviços financeiros. Minha expertise abrange o desenvolvimento de sistemas web, mobile e infraestrutura, sempre com foco na entrega de soluções que agreguem valor ao negócio.</p>
-      <br>
-      <br>
-      <p>Destaco minhas principais competências:</p>
-      <br>
-      <li> Experiência em gestão de projetos utilizando metodologias ágeis como Scrum e Kanban</li>
-      <li> Ações em Scrum Master e Product Owner</li>
-      <li> Expertise em gestão de backlog, custos e entregas</li>
-      <li> Habilidade comprovada em alinhamento de expectativas com stakeholders</li>
-      <li> Proficiência na condução de inceptions e levantamento de requisitos</li>
-      <br>
-      <br>
-      <p>Nas últimas posições, como Team Leader na Sensedia e Gerente de Projetos na Alpek Polyester, desenvolvi competências fundamentais para o sucesso de projetos de TI, como:</p>
-      <br>
-      <li> Promoção de práticas ágeis</li>
-      <li> Controle de KPIs para melhoria contínua de performance</li>
-      <li> Gestão de equipes de desenvolvimento</li>
-      <li> Alinhamento de OKRs</li>
-      <li> Controle orçamentário</li>
-      <li> Desenvolvimento de sistemas com uso de NextJS, Python e PHP.</li>
-      <br>
-      <p> A minha formação acadêmica complementa a experiência profissional, com MBA em Gestão de Projetos e Gestão de dados, Bacharelado em Ciência da Computação e formação em Direito, o que me permite uma visão multidisciplinar e estratégica.</p>
-
-
-    </section>
-
-    <section class="section">
-      <h2>Experiência Profissional</h2>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Sensedia SA</span>
-          <span>Junho/2021 - Dezembro/2024</span>
-        </div>
-        <p><em>Team Leader</em></p>
-        <ul>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Garantir que os processos e objetivos do time estejam em sincronia com os OKR da empresa;</li>
-          <li>Promover o desenvolvimento do time por meios de PDIs, 1:1 e técnicas de melhoria de processos;</li>
-          <li>Garantir as entregas dos projetos de portais de desenvolvedores aos clientes nos prazos e qualidades acordadas;</li>
-          <li>NextJS, Python e AstroJS;</li>
-          <li>Negociação de propostas comerciais e técnicas com clientes e gestão de comunicação nos projetos;</li>
-        </ul>
+      <div class="section-header">
+        <h2>Objetivo</h2>
+        <i class="fas fa-chevron-down"></i>
       </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Alpek Polyester</span>
-          <span>Agosto/2020 - Junho/2021</span>
-        </div>
-        <p><em>Gerente de Projetos</em></p>
-        <ul>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Promoção da sintonia das expectativas dos clientes internos e o time de TI;</li>
-          <li>Gestão do projeto de adequação da planta a nova legislação de proteção de dados brasileira LGPD;</li>
-          <li>Planejamento do orçamento, escopo, riscos e prazo dos projetos de TI;</li>
-          <li>Gestão do projeto de adequação da planta a nova legislação de proteção de dados brasileira LGPD;</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Truewind</span>
-          <span>Janeiro/2020 - Agosto/2021</span>
-        </div>
-        <p><em>Engagement Manager</em></p>
-        <ul>
-          <li>Responsável pela entrega de projetos de desenvolvimento com o uso da ferramenta lowcode Outsystem;</li>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
-          <li>Planejar o backlog, levantar os prazos, montar o time do projeto e negociar propostas com o cliente;</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Qintess</span>
-          <span>Julho/2019 - Janeiro/2020</span>
-        </div>
-        <p><em>Analista de Negócios</em></p>
-        <ul>
-          <li>Discovery das necessidade do cliente e transformação de requisitos em estórias para o time de desenvolvimento;</li>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
-          <li>Gestão de backlog, garantindo as entregas no prazo e qualidade acordados;</li>
-          <li>Gestão da evolução do sistema de execuções e pagamentos de julgados do TCE Pernambuco</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">+Agile Consultoria</span>
-          <span>Agosto/2014 - Julho/2017</span>
-        </div>
-        <p><em>Gerente de Projetos</em></p>
-        <ul>
-          <li>Controle do escopo, budget e comunicação do projetos;</li>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Python, SQL, Mysql;</li>
-          <li>Desenvolvimento de sistemas de controle de entregas e coleta de cargas;</li>
-          <li>Desenvolvimento de sistemas de controles de cargas e armazenagem;</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Wilson, sons</span>
-          <span>Março/2010 - Julho/2013</span>
-        </div>
-        <p><em>Coordenador de TI</em></p>
-        <ul>
-          <li>Gestão de equipes de desenvolvimento e suporte no porto de salvador;</li>
-          <li>Gestão de projetos de TI, sistema de segurança e monitoramento do porto, sistema de agendamento de retirada de cargas, automação de pátio e desembarque e embarque de cargas;</li>
-          <li>PLSQL, Oracle, C#, Mysql;</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Qintess</span>
-          <span>Julho/2019 - Janeiro/2020</span>
-        </div>
-        <p><em>Analista de Negócios</em></p>
-        <ul>
-          <li>Discovery das necessidade do cliente e transformação de requisitos em estórias para o time de desenvolvimento;</li>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
-          <li>Gestão de backlog, garantindo as entregas no prazo e qualidade acordados;</li>
-          <li>Gestão da evolução do sistema de execuções e pagamentos de julgados do TCE Pernambuco</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">+Agile Consultoria</span>
-          <span>Agosto/2014 - Julho/2017</span>
-        </div>
-        <p><em>Gerente de Projetos</em></p>
-        <ul>
-          <li>Controle do escopo, budget e comunicação do projetos;</li>
-          <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
-          <li>Python, SQL, Mysql;</li>
-          <li>Desenvolvimento de sistemas de controle de entregas e coleta de cargas;</li>
-          <li>Desenvolvimento de sistemas de controles de cargas e armazenagem;</li>
-        </ul>
-      </div>
-
-      <div class="experience-item">
-        <div class="experience-title">
-          <span class="experience-company">Wilson, sons</span>
-          <span>Março/2010 - Julho/2013</span>
-        </div>
-        <p><em>Coordenador de TI</em></p>
-        <ul>
-          <li>Gestão de equipes de desenvolvimento e suporte no porto de salvador;</li>
-          <li>Gestão de projetos de TI, sistema de segurança e monitoramento do porto, sistema de agendamento de retirada de cargas, automação de pátio e desembarque e embarque de cargas;</li>
-          <li>PLSQL, Oracle, C#, Mysql;</li>
-        </ul>
+      <div class="section-content">
+        <p>Gerente de Projetos</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Formação Acadêmica</h2>
-      <ul>
-        <li>MBA em Business Analytics e Gestão de Dados - UNICAP (2024)</li>
-        <li>Bacharelado em Direito - Universidade Estácio (2022)</li>
-        <li>MBA em Gestão de Projetos - Fundação Getúlio Vargas (2014)</li>
-        <li>Especialização em Sistemas de Informação - Faculdade Rui Barbosa (2004)</li>
-        <li>Bacharelado em Ciências da Computação - UNICAP (1999)</li>
-      </ul>
-    </section>
+      <div class="section-header">
+        <h2>Resumo Profissional</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <br>
 
-    <section class="section">
-      <h2>Certificações e Cursos</h2>
-      <ul>
-        <li>Curso Penetration Testing - CESAR School (16h)</li>
-        <li>Certificação Fundamentos na Lei Geral de Proteção de Dados - LGPDF</li>
-        <li>Certificação IPOF - International Product Owner Foundation</li>
-        <li>Certificação SFPC - Scrum Foundation Professional Certificate</li>
-        <li>Certificação ISMF - International Scrum Master Foundation</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>Competências</h2>
-      <div class="skills">
-        <span class="skill-item">Gestão de Projetos</span>
-        <span class="skill-item">Metodologias Ágeis</span>
-        <span class="skill-item">Scrum</span>
-        <span class="skill-item">Kanban</span>
-        <span class="skill-item">LGPD</span>
-        <span class="skill-item">Python</span>
-        <span class="skill-item">NextJS</span>
-        <span class="skill-item">SQL</span>
-        <span class="skill-item">Liderança de Equipes</span>
-        <span class="skill-item">Inglês Avançado</span>
+        <p>Profissional de TI com mais 20 anos de experiência em tecnologia, possuo um sólido background em gestão de projetos, liderança de equipes multidisciplinares e implementação de metodologias ágeis.Ao longo de minha trajetória profissional, atuei em diversos setores, incluindo logística, indústria alimentícia, eletrônicos, transportadoras e serviços financeiros. Minha expertise abrange o desenvolvimento de sistemas web, mobile e infraestrutura, sempre com foco na entrega de soluções que agreguem valor ao negócio.</p>
+        <br>
+        <br>
+        <p>Destaco minhas principais competências:</p>
+        <br>
+        <li> Experiência em gestão de projetos utilizando metodologias ágeis como Scrum e Kanban</li>
+        <li> Ações em Scrum Master e Product Owner</li>
+        <li> Expertise em gestão de backlog, custos e entregas</li>
+        <li> Habilidade comprovada em alinhamento de expectativas com stakeholders</li>
+        <li> Proficiência na condução de inceptions e levantamento de requisitos</li>
+        <br>
+        <br>
+        <p>Nas últimas posições, como Team Leader na Sensedia e Gerente de Projetos na Alpek Polyester, desenvolvi competências fundamentais para o sucesso de projetos de TI, como:</p>
+        <br>
+        <li> Promoção de práticas ágeis</li>
+        <li> Controle de KPIs para melhoria contínua de performance</li>
+        <li> Gestão de equipes de desenvolvimento</li>
+        <li> Alinhamento de OKRs</li>
+        <li> Controle orçamentário</li>
+        <li> Desenvolvimento de sistemas com uso de NextJS, Python e PHP.</li>
+        <br>
+        <p> A minha formação acadêmica complementa a experiência profissional, com MBA em Gestão de Projetos e Gestão de dados, Bacharelado em Ciência da Computação e formação em Direito, o que me permite uma visão multidisciplinar e estratégica.</p>
       </div>
     </section>
 
     <section class="section">
-      <h2>Modalidade de Trabalho</h2>
-      <p>Atuação On-site e hybrid em Recife, em outras localidades Remote</p>
+      <div class="section-header">
+        <h2>Experiência Profissional</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Sensedia SA</span>
+            <span>Junho/2021 - Dezembro/2024</span>
+          </div>
+          <p><em>Team Leader</em></p>
+          <ul>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Garantir que os processos e objetivos do time estejam em sincronia com os OKR da empresa;</li>
+            <li>Promover o desenvolvimento do time por meios de PDIs, 1:1 e técnicas de melhoria de processos;</li>
+            <li>Garantir as entregas dos projetos de portais de desenvolvedores aos clientes nos prazos e qualidades acordadas;</li>
+            <li>NextJS, Python e AstroJS;</li>
+            <li>Negociação de propostas comerciais e técnicas com clientes e gestão de comunicação nos projetos;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Alpek Polyester</span>
+            <span>Agosto/2020 - Junho/2021</span>
+          </div>
+          <p><em>Gerente de Projetos</em></p>
+          <ul>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Promoção da sintonia das expectativas dos clientes internos e o time de TI;</li>
+            <li>Gestão do projeto de adequação da planta a nova legislação de proteção de dados brasileira LGPD;</li>
+            <li>Planejamento do orçamento, escopo, riscos e prazo dos projetos de TI;</li>
+            <li>Gestão do projeto de adequação da planta a nova legislação de proteção de dados brasileira LGPD;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Truewind</span>
+            <span>Janeiro/2020 - Agosto/2021</span>
+          </div>
+          <p><em>Engagement Manager</em></p>
+          <ul>
+            <li>Responsável pela entrega de projetos de desenvolvimento com o uso da ferramenta lowcode Outsystem;</li>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
+            <li>Planejar o backlog, levantar os prazos, montar o time do projeto e negociar propostas com o cliente;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Qintess</span>
+            <span>Julho/2019 - Janeiro/2020</span>
+          </div>
+          <p><em>Analista de Negócios</em></p>
+          <ul>
+            <li>Discovery das necessidade do cliente e transformação de requisitos em estórias para o time de desenvolvimento;</li>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
+            <li>Gestão de backlog, garantindo as entregas no prazo e qualidade acordados;</li>
+            <li>Gestão da evolução do sistema de execuções e pagamentos de julgados do TCE Pernambuco</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">+Agile Consultoria</span>
+            <span>Agosto/2014 - Julho/2017</span>
+          </div>
+          <p><em>Gerente de Projetos</em></p>
+          <ul>
+            <li>Controle do escopo, budget e comunicação do projetos;</li>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Python, SQL, Mysql;</li>
+            <li>Desenvolvimento de sistemas de controle de entregas e coleta de cargas;</li>
+            <li>Desenvolvimento de sistemas de controles de cargas e armazenagem;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Wilson, sons</span>
+            <span>Março/2010 - Julho/2013</span>
+          </div>
+          <p><em>Coordenador de TI</em></p>
+          <ul>
+            <li>Gestão de equipes de desenvolvimento e suporte no porto de salvador;</li>
+            <li>Gestão de projetos de TI, sistema de segurança e monitoramento do porto, sistema de agendamento de retirada de cargas, automação de pátio e desembarque e embarque de cargas;</li>
+            <li>PLSQL, Oracle, C#, Mysql;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Qintess</span>
+            <span>Julho/2019 - Janeiro/2020</span>
+          </div>
+          <p><em>Analista de Negócios</em></p>
+          <ul>
+            <li>Discovery das necessidade do cliente e transformação de requisitos em estórias para o time de desenvolvimento;</li>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Gestão de riscos e backlog, garantindo a entrega e comunicação com o cliente;</li>
+            <li>Gestão de backlog, garantindo as entregas no prazo e qualidade acordados;</li>
+            <li>Gestão da evolução do sistema de execuções e pagamentos de julgados do TCE Pernambuco</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">+Agile Consultoria</span>
+            <span>Agosto/2014 - Julho/2017</span>
+          </div>
+          <p><em>Gerente de Projetos</em></p>
+          <ul>
+            <li>Controle do escopo, budget e comunicação do projetos;</li>
+            <li>Promoção de práticas ágeis no team (Kanban e Scrum);</li>
+            <li>Python, SQL, Mysql;</li>
+            <li>Desenvolvimento de sistemas de controle de entregas e coleta de cargas;</li>
+            <li>Desenvolvimento de sistemas de controles de cargas e armazenagem;</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <div class="experience-title">
+            <span class="experience-company">Wilson, sons</span>
+            <span>Março/2010 - Julho/2013</span>
+          </div>
+          <p><em>Coordenador de TI</em></p>
+          <ul>
+            <li>Gestão de equipes de desenvolvimento e suporte no porto de salvador;</li>
+            <li>Gestão de projetos de TI, sistema de segurança e monitoramento do porto, sistema de agendamento de retirada de cargas, automação de pátio e desembarque e embarque de cargas;</li>
+            <li>PLSQL, Oracle, C#, Mysql;</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Formação Acadêmica</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <ul>
+          <li>MBA em Business Analytics e Gestão de Dados - UNICAP (2024)</li>
+          <li>Bacharelado em Direito - Universidade Estácio (2022)</li>
+          <li>MBA em Gestão de Projetos - Fundação Getúlio Vargas (2014)</li>
+          <li>Especialização em Sistemas de Informação - Faculdade Rui Barbosa (2004)</li>
+          <li>Bacharelado em Ciências da Computação - UNICAP (1999)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Certificações e Cursos</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <ul>
+          <li>Curso Penetration Testing - CESAR School (16h)</li>
+          <li>Certificação Fundamentos na Lei Geral de Proteção de Dados - LGPDF</li>
+          <li>Certificação IPOF - International Product Owner Foundation</li>
+          <li>Certificação SFPC - Scrum Foundation Professional Certificate</li>
+          <li>Certificação ISMF - International Scrum Master Foundation</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Competências</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <div class="skills">
+          <span class="skill-item">Gestão de Projetos</span>
+          <span class="skill-item">Metodologias Ágeis</span>
+          <span class="skill-item">Scrum</span>
+          <span class="skill-item">Kanban</span>
+          <span class="skill-item">LGPD</span>
+          <span class="skill-item">Python</span>
+          <span class="skill-item">NextJS</span>
+          <span class="skill-item">SQL</span>
+          <span class="skill-item">Liderança de Equipes</span>
+          <span class="skill-item">Inglês Avançado</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Modalidade de Trabalho</h2>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+      <div class="section-content">
+        <p>Atuação On-site e hybrid em Recife, em outras localidades Remote</p>
+      </div>
     </section>
   </main>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Mostrar o primeiro conteúdo por padrão
+      const firstSection = document.querySelector('.section-content');
+      firstSection.style.display = 'block';
+      firstSection.previousElementSibling.classList.add('active');
+
+      // Adicionar listeners para todos os headers
+      const headers = document.querySelectorAll('.section-header');
+      headers.forEach(header => {
+        header.addEventListener('click', function () {
+          const content = this.nextElementSibling;
+          const isVisible = content.style.display === 'block';
+
+          // Toggle atual
+          content.style.display = isVisible ? 'none' : 'block';
+          this.classList.toggle('active');
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
