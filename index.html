@@ -60,8 +60,8 @@
       justify-content: space-between;
       align-items: center;
       background-color: var(--light-bg);
-      border-radius: 5px;
-      transition: all 11.3s ease;
+      border-radius: 10px;
+      transition: all 0.3s ease;
     }
 
     .section-header:hover {
@@ -108,14 +108,27 @@
       transition: color 0.3s ease;
     }
 
+    .idioma-info {
+      margin: 1rem 0;
+      flex-wrap: wrap;
+      border: 1.5px;
+      gap: 1rem;
+      justify-content: left;
+    }
+
+    td {
+      padding: 0.5rem;
+    }
+
     .contact-info a:hover {
       color: var(--accent-color);
     }
 
     .section {
       margin: 1rem 0;
-      border: 1px solid #eee;
-      border-radius: 5px;
+      border: 0.5px solid #eee;
+      border-radius: 10px;
+      padding: none;
     }
 
     .experience-item {
@@ -184,7 +197,7 @@
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="section-content">
-        <p>Gerente de Projetos</p>
+        <p><strong> Gerente de Projetos | Gerente de Produtos | Team Leader </strong></p>
       </div>
     </section>
 
@@ -398,11 +411,20 @@
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="section-content">
-        <ul>
-          <li>Ingles - Avançado</li>
-          <li>Português - Nativo</li>
-          <li>Espanhol - Básico</li>
-        </ul>
+        <table class="idioma-info">
+          <tr>
+            <td><strong>Ingles</strong></td>
+            <td>Avançado</td>
+          </tr>
+          <tr>
+            <td><strong> Português </strong></td>
+            <td>Nativo</td>
+          </tr>
+          <tr>
+            <td><strong>Espanhol</strong></td>
+            <td>Básico</td>
+          </tr>
+        </table>
       </div>
     </section>
 
